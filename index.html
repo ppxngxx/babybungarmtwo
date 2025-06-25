@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Travel Go By บังอาร์ม 🔥</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🌴 Easy Travel Go By บังอาร์ม 🔥</h1>
+    </header>
+    <main>
+        <section class="form-section">
+            <label for="province">เลือกจังหวัดปลายทาง:</label>
+            <select id="province"></select>
+
+            <div id="places-section">
+                <h2>📸 สถานที่ท่องเที่ยวแนะนำ</h2>
+                <ul id="places-list"></ul>
+                <div id="distance-section" style="margin-top:1rem; font-size:1.05rem; color:#00796b;"></div>
+                <a id="gmap-link" href="#" target="_blank" style="display:inline-block;margin-top:0.5rem;color:#009688;font-weight:bold;text-decoration:underline;">ดูเส้นทางบน Google Maps</a>
+            </div>
+
+            <fieldset>
+                <legend>เลือกวิธีเดินทาง</legend>
+                <label><input type="radio" name="transport" value="plane" checked> เครื่องบิน ✈️</label>
+                <label><input type="radio" name="transport" value="car"> รถยนต์ 🚗</label>
+                <label><input type="radio" name="transport" value="bus"> รถทัวร์ 🚌</label>
+                <label><input type="radio" name="transport" value="train"> รถไฟ 🚆</label>
+            </fieldset>
+
+            <button id="calculate-btn">คำนวณค่าเดินทาง</button>
+        </section>
+        <section id="result-section">
+            <h2>💸 ผลลัพธ์การคำนวณ</h2>
+            <div id="result"></div>
+        </section>
+        <section id="booking-section">
+            <h2>🛒 จองตั๋วเดินทาง</h2>
+            <div class="booking-links">
+                <a href="https://dticket.railway.co.th/" target="_blank" class="booking-btn">🚆 จองตั๋วรถไฟ (การรถไฟแห่งประเทศไทย)</a>
+                <a href="https://www.traveloka.com/th-th/flight" target="_blank" class="booking-btn">✈️ จองตั๋วเครื่องบิน (Traveloka)</a>
+                <a href="https://www.busonlineticket.co.th/th/" target="_blank" class="booking-btn">🚌 จองตั๋วรถทัวร์ (BusOnlineTicket)</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- AI Chat Widget -->
+    <div id="ai-chat-btn">💬 สอบถามข้อมูลเพิ่มเติม</div>
+    <div id="ai-chatbox">
+      <div id="ai-chat-header">AI Chat Assistant <span id="ai-chat-close">✖️</span></div>
+      <div id="ai-chat-messages"></div>
+      <form id="ai-chat-form">
+        <input type="text" id="ai-chat-input" placeholder="พิมพ์คำถาม..." autocomplete="off" required />
+        <button type="submit">ส่ง</button>
+      </form>
+    </div>
+    <!-- End AI Chat Widget -->
+
+    <script src="app.js"></script>
+</body>
+</html>
